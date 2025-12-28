@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    <title>BigFoot Sighing Data</title>
+{% endblock title %}
+
+
+{% block content %}
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="hero__overlay" aria-hidden="true"></div>
+
+  <div class="hero__container">
+    <div class="hero__content">
+      <p class="hero__kicker">
+        Evidence-based field reports • Audio archives • Regional maps
+      </p>
+
+      <h1 id="hero-title" class="hero__title">
+        Track credible Bigfoot reports.<br />
+        <span class="hero__titleAccent">Analyze patterns.</span> Explore the unknown.
+      </h1>
+
+      <p class="hero__subtitle">
+        Search verified sightings, compare regional trends, and dig into audio & video
+        evidence—built for researchers, skeptics, and curious hikers alike.
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="/sightings">
+          Browse Sightings
+          <span class="btn__icon" aria-hidden="true">→</span>
+        </a>
+        <a class="btn btn--ghost" href="/research">Start Research</a>
+      </div>
+
+      <form class="hero__search" action="/sightings" method="get" role="search" aria-label="Search sightings">
+        <label class="sr-only" for="q">Search sightings</label>
+        <div class="hero__searchRow">
+          <input
+            id="q"
+            name="q"
+            type="search"
+            class="hero__input"
+            placeholder="Search by state, county, year, or keyword (e.g., “howls”, “tracks”)"
+            autocomplete="off"
+          />
+
+          <label class="sr-only" for="region">Region</label>
+          <select id="region" name="region" class="hero__select">
+            <option value="">All regions</option>
+            <option value="pnw">Pacific Northwest</option>
+            <option value="rockies">Rockies</option>
+            <option value="midwest">Midwest</option>
+            <option value="appalachia">Appalachia</option>
+            <option value="south">South</option>
+            <option value="northeast">Northeast</option>
+          </select>
+
+          <button class="btn btn--primary btn--search" type="submit">
+            Search
+          </button>
+        </div>
+
+        <div class="hero__chips" aria-label="Popular searches">
+          <a class="chip" href="/sightings?q=tracks">Tracks</a>
+          <a class="chip" href="/sightings?q=whoops">Whoops</a>
+          <a class="chip" href="/sightings?q=wood+knocks">Wood knocks</a>
+          <a class="chip" href="/sightings?q=night">Night encounters</a>
+        </div>
+      </form>
+
+      <div class="hero__stats" aria-label="Site highlights">
+        <div class="stat">
+          <div class="stat__num">12k+</div>
+          <div class="stat__label">Sightings indexed</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">800+</div>
+          <div class="stat__label">Audio clips</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">50</div>
+          <div class="stat__label">States covered</div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="hero__card" aria-label="Featured report">
+      <div class="card">
+        <div class="card__badge">Featured Case</div>
+        <h2 class="card__title">Sighting #1842 — Timberline Ridge</h2>
+        <p class="card__meta">Oregon • 2007 • 02:14 AM • Clear weather</p>
+
+        <p class="card__body">
+          “Loud vocalizations followed by heavy bipedal steps—then a sustained
+          wood knock sequence. Track impressions found near the creek bed.”
+        </p>
+
+        <div class="card__actions">
+          <a class="btn btn--ghost btn--sm" href="/audios">Hear audio</a>
+          <a class="btn btn--primary btn--sm" href="/sightings/1842">View report</a>
+        </div>
+
+        <div class="card__footer">
+          <span class="dot"></span>
+          Updated weekly with new submissions & verification notes
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<br><br>
+
+{% include 'state_selector.html' %}
+
+{% endblock content %}

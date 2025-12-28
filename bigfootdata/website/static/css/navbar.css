@@ -1,0 +1,41 @@
+nav {
+  display: flex;
+  align-items: anchor-center;
+  justify-content: space-between;
+  background: #1a1a1a;
+}
+nav .left-side a {
+  text-decoration: none;
+  display: flex;
+  align-items: anchor-center;
+}
+nav .left-side a img {
+  width: 115px;
+}
+nav .left-side a h1 {
+  font-size: 34px;
+  width: 45%;
+  color: white;
+  font-family: math;
+}
+nav .left-side a:hover h1 {
+  color: #e2e2e2;
+}
+nav .right-side {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+nav .right-side a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  padding: 4px;
+  border: 1px solid transparent;
+  font-family: math;
+}
+nav .right-side a:hover {
+  background: #262626;
+  border-radius: 10px;
+  border: 1px solid rgba(46, 255, 168, 0.92);
+}/*# sourceMappingURL=navbar.css.map */
