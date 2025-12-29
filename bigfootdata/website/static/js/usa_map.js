@@ -240,26 +240,26 @@ var ClickableMap = {};
         $stateText.style.fill = this.globalData.hoverLabelColor;
         $stateLink.style.cursor = 'pointer'
       }
-      if (this.globalData.showStateTitleAndDescOnHover) {
-        var $hoverStateInfo = global.getEleByQuery('#' + this.$map.id + ' .' + classPrefix + 'hover-state-info');
-        var titleText = this.statesData[stateId].title == null ? '' : this.statesData[stateId].title;
-        var descText = this.statesData[stateId].description == null ? '' : this.statesData[stateId].description;
-        var longDescText = this.statesData[stateId].longDescription == null ? '' : this.statesData[stateId].longDescription;
-        var titleSpan = document.createElement('span');
-        var descSpan = document.createElement('span');
-        titleSpan.textContent = titleText;
-        if (longDescText != '') {
-          descSpan.innerHTML = longDescText
-        } else {
-          descSpan.textContent = descText
-        }
-        while ($hoverStateInfo.firstChild) {
-          $hoverStateInfo.removeChild($hoverStateInfo.firstChild)
-        }
-        $hoverStateInfo.appendChild(titleSpan);
-        $hoverStateInfo.appendChild(descSpan);
-        $hoverStateInfo.style.display = 'block'
-      }
+      // if (this.globalData.showStateTitleAndDescOnHover) {
+      //   var $hoverStateInfo = global.getEleByQuery('#' + this.$map.id + ' .' + classPrefix + 'hover-state-info');
+      //   var titleText = this.statesData[stateId].title == null ? '' : this.statesData[stateId].title;
+      //   var descText = this.statesData[stateId].description == null ? '' : this.statesData[stateId].description;
+      //   var longDescText = this.statesData[stateId].longDescription == null ? '' : this.statesData[stateId].longDescription;
+      //   var titleSpan = document.createElement('span');
+      //   var descSpan = document.createElement('span');
+      //   titleSpan.textContent = titleText;
+      //   if (longDescText != '') {
+      //     descSpan.innerHTML = longDescText
+      //   } else {
+      //     descSpan.textContent = descText
+      //   }
+      //   while ($hoverStateInfo.firstChild) {
+      //     $hoverStateInfo.removeChild($hoverStateInfo.firstChild)
+      //   }
+      //   $hoverStateInfo.appendChild(titleSpan);
+      //   $hoverStateInfo.appendChild(descSpan);
+      //   $hoverStateInfo.style.display = 'block'
+      // }
       if (!this.statesData[stateId].isDisabled && this.globalData.enableShadows) {
         statePathBlur = $statePath.cloneNode(true);
         statePathBlur.setAttribute('filter', 'url(#' + this.$map.id + '-blur-filter)');
@@ -307,6 +307,7 @@ var ClickableMap = {};
           var self = this;
           $stateLink.addEventListener('mouseover', function(e) {
             stateOn.call(self, stateId)
+            console.log(stateId)
           });
           $stateLink.addEventListener('mouseout', function(e) {
             stateOff.call(self, stateId)

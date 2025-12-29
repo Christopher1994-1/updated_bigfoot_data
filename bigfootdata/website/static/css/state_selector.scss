@@ -4,6 +4,7 @@ $body-background-color: #333;
 $background-color: #292929;
 $font-color: #fff;
 $highlight-color: #8d99ae;
+$green_main: rgba(46, 255, 168, 0.92);
 
 
 // main css code for the hr/div separator
@@ -60,7 +61,7 @@ $highlight-color: #8d99ae;
 .usa-map-container {
     width: 70%;
     margin: auto;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 10px 0px rgba(48, 106, 51, 0.4);
     padding: 10px;
 }
 
@@ -160,44 +161,9 @@ $highlight-color: #8d99ae;
   
 
 
-// Main container for third index stuff
-.third-index-div-container {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    color: $text-color;
-
-    .states-div {
-        display: flex;
-
-
-        .states {
-            border: $border;
-
-
-            h1 {
-              margin-bottom: 0;
-            }
-
-            small {
-              margin-top: 0;
-              color: $text-color;
-            }
-        }
-    }
-}
 
 
 
-
-// CSS code for the footer paragraph
-.footer-paragraph {
-    width: 80%;
-    margin: auto;
-    color: $text-color;
-    text-align: center;
-    margin-bottom: 5%;
-}
 
 
 

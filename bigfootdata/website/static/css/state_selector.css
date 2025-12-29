@@ -34,7 +34,7 @@
 .usa-map-container {
   width: 70%;
   margin: auto;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px 0px rgba(48, 106, 51, 0.4);
   padding: 10px;
 }
 
@@ -143,34 +143,6 @@
 
 .cmm-usa-credit-link {
   text-align: center;
-}
-
-.third-index-div-container {
-  width: 80%;
-  margin: auto;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.712);
-}
-.third-index-div-container .states-div {
-  display: flex;
-}
-.third-index-div-container .states-div .states {
-  border: 2px solid black;
-}
-.third-index-div-container .states-div .states h1 {
-  margin-bottom: 0;
-}
-.third-index-div-container .states-div .states small {
-  margin-top: 0;
-  color: rgba(255, 255, 255, 0.712);
-}
-
-.footer-paragraph {
-  width: 80%;
-  margin: auto;
-  color: rgba(255, 255, 255, 0.712);
-  text-align: center;
-  margin-bottom: 5%;
 }
 
 .main-state-container {

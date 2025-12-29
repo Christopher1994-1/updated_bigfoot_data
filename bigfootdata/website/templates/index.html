@@ -2,7 +2,7 @@
 
 
 {% block title %}
-    <title>BigFoot Sighing Data</title>
+    <title>Bigfoot Field Researchers Organization</title>
 {% endblock title %}
 
 
@@ -20,8 +20,8 @@
       </p>
 
       <h1 id="hero-title" class="hero__title">
-        Track credible Bigfoot reports.<br />
-        <span class="hero__titleAccent">Analyze patterns.</span> Explore the unknown.
+        Collecting and preserving Bigfoot sighting reports for over<br />
+        <span class="hero__titleAccent">30 Years.</span>
       </h1>
 
       <p class="hero__subtitle">
@@ -116,6 +116,49 @@
 
 <br><br>
 
+<h1 id="selectastate">- Select a State -</h1>
+
 {% include 'state_selector.html' %}
+
+<div class="third-index-div-container">
+    <h1>States With The Most Sightings</h1>
+
+        <div class="labled-states">
+
+            <div class="states-div">
+                <div class="states" id="washingotn-st">
+                    <h1>WA</h1>
+                    <small>102</small>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore aut est unde quibusdam molestias</p>
+                </div>
+
+                <div class="states">
+                    <h1>CA</h1>
+                    <small>99</small>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore aut est unde quibusdam molestias</p>
+                </div>
+
+                <div class="states">
+                    <h1>OH</h1>
+                    <small>39</small>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore aut est unde quibusdam molestias</p>
+                </div>
+
+                <div class="states" id="florida-st">
+                    <h1>FL</h1>
+                    <small>14</small>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore aut est unde quibusdam molestias</p>
+                </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% include 'index_things/expeditions_misc.html' %}
+
+{% include 'index_things/report_sighting.html' %}
+
+{% include 'index_things/faq_section.html' %}
 
 {% endblock content %}
