@@ -1,0 +1,105 @@
+footer {
+    display: flex;
+    font-family: math;
+    color: white;
+    justify-content: space-around;
+    border-top: 2px solid rgba(46, 255, 168, 0.92);
+
+
+    .first-side {
+        width: 26%;
+
+        .top {
+            h1 {
+                margin-bottom: 0;
+            }
+
+            p {
+                margin-top: 3px;
+            }
+
+        }
+
+        .bottom {
+            h1 {
+                margin-bottom: 0;
+            }
+
+            p {
+                margin: 0;
+                margin-bottom: 4px;
+            }
+        }
+
+    }
+
+
+
+    .second-side {
+        width: 27%;
+    }
+
+
+
+    .third-side {
+        width: 30%;
+
+        h1 {
+            margin-bottom: 0;
+        }
+
+        .subscribe-email {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                margin-bottom: 4px;
+                padding: 10px;
+                border-radius: 7px;
+                border: 1px solid grey;
+                background: black;
+            }
+
+            button {
+                padding: 7px;
+                border-radius: 6px;
+                border: none;
+                margin-bottom: 25px;
+                background-color: rgba(46, 255, 168, 0.92);
+                font-size: 21px;
+                cursor: pointer;
+                color: white;
+            }
+        }
+
+
+        .social-icons {
+            a {
+                color: white;
+                font-size: 34px;
+                margin-left: 6px;
+
+                &:hover {
+                    color: rgb(194, 194, 194);
+                }
+            }
+
+            #fb {
+                margin-left: 0;
+            }
+        }
+
+
+        .last-bit {
+            margin-top: 6px;
+
+            small {
+                font-family: math;
+
+                span {
+                    color: rgba(46, 255, 168, 0.92);
+                }
+            }
+        }
+    }
+}

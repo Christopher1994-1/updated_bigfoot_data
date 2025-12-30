@@ -1118,4 +1118,78 @@ nav .right-side a:hover {
   font-weight: lighter;
   font-family: "Times New Roman", Times, serif;
   color: rgba(255, 255, 255, 0.582);
+}
+
+footer {
+  display: flex;
+  font-family: math;
+  color: white;
+  justify-content: space-around;
+  border-top: 2px solid rgba(46, 255, 168, 0.92);
+}
+footer .first-side {
+  width: 26%;
+}
+footer .first-side .top h1 {
+  margin-bottom: 0;
+}
+footer .first-side .top p {
+  margin-top: 3px;
+}
+footer .first-side .bottom h1 {
+  margin-bottom: 0;
+}
+footer .first-side .bottom p {
+  margin: 0;
+  margin-bottom: 4px;
+}
+footer .second-side {
+  width: 27%;
+}
+footer .third-side {
+  width: 30%;
+}
+footer .third-side h1 {
+  margin-bottom: 0;
+}
+footer .third-side .subscribe-email {
+  display: flex;
+  flex-direction: column;
+}
+footer .third-side .subscribe-email input {
+  margin-bottom: 4px;
+  padding: 10px;
+  border-radius: 7px;
+  border: 1px solid grey;
+  background: black;
+}
+footer .third-side .subscribe-email button {
+  padding: 7px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 25px;
+  background-color: rgba(46, 255, 168, 0.92);
+  font-size: 21px;
+  cursor: pointer;
+  color: white;
+}
+footer .third-side .social-icons a {
+  color: white;
+  font-size: 34px;
+  margin-left: 6px;
+}
+footer .third-side .social-icons a:hover {
+  color: rgb(194, 194, 194);
+}
+footer .third-side .social-icons #fb {
+  margin-left: 0;
+}
+footer .third-side .last-bit {
+  margin-top: 6px;
+}
+footer .third-side .last-bit small {
+  font-family: math;
+}
+footer .third-side .last-bit small span {
+  color: rgba(46, 255, 168, 0.92);
 }/*# sourceMappingURL=main.css.map */
