@@ -10,6 +10,7 @@
     
 </head>
 <body>
+    <input type="hidden" name="currentYear" id="currentYear" value="{{current_year}}">
     {% block navbar %}
         {% include 'navbar.html' %}
     {% endblock navbar %}
@@ -23,6 +24,9 @@
     {% block footer %}
         {% include 'footer.html' %}
     {% endblock footer %}
+
+
+    <script src="{% static 'js/core_systems.js' %}"></script>
     
 </body>
 </html>

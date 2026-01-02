@@ -668,6 +668,7 @@ $hero_wallpaper: url("/static/images/343534-825-auto.png");
 // Drop-in SCSS — no frameworks required.
 
 .mystery-article {
+  display: none;
   // Theme tokens (easy to tweak)
   --bg: #0b1220;
   --panel: rgba(255, 255, 255, 0.06);

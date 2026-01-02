@@ -622,6 +622,7 @@
 }
 
 .mystery-article {
+  display: none;
   --bg: #0b1220;
   --panel: rgba(255, 255, 255, 0.06);
   --panel-2: rgba(255, 255, 255, 0.08);
