@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Research State: {{state_name}}</title>
+{% endblock title %}
+
+
+{% block content %}
+
+
+<div class="state_selection_main">
+    <div class="top-side">
+        <img src="{% static 'images/states/'|add:state_name|add:'.png' %}" alt="{{ state_name }} icon">
+
+        <h1>{{total_sightings}} Total Sightings in {{state_name}}</h1>
+    </div>
+</div>
+
+
+
+{% endblock content %}
+

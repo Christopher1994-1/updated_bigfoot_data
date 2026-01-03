@@ -1,14 +1,10 @@
-from django.test import TestCase
 import pandas as pd
 import math
 
-# Create your tests here.
 
-
-
-bigfoot_locations = pd.read_csv('bfro_locations.csv')
-bigfoot_geo_reports = pd.read_csv('bfro_reports_geocoded.csv')
-bigfoot_reports = pd.read_csv('bfro_reports.csv')
+# bigfoot_locations = pd.read_csv('bfro_locations.csv')
+# bigfoot_geo_reports = pd.read_csv('bfro_reports_geocoded.csv')
+# bigfoot_reports = pd.read_csv('bfro_reports.csv')
 
 
 # function that gets the 3 most recent sightings from whatever state that is selected
@@ -295,45 +291,3 @@ def recent_reports(state, number):
     return json_rows[0]['county']
 
 
-
-
-# function that gets the 3 most recent sightings from whatever state that is selected
-def getting_recent_reports(state):
-    months = {
-        "01":"January",
-        "02":"February",
-        "03":"March",
-        "04":"April",
-        "05":"May",
-        "06":"June",
-        "07":"July",
-        "08":"August",
-        "09":"September",
-        "10":"October",
-        "11":"November",
-        "12":"December",
-    }
-    bigfoot_geo_reports = pd.read_csv('bfro_reports_geocoded.csv')
-    
-    state = str(state).title()
-    
-    
-
-
-
-return_recent_reports_dict = getting_recent_reports('texas')
-counties = getting_counties('texas')
-    
-    
-print(return_recent_reports_dict)
-
-
-print(counties)
-
-
-['observed', 'location_details', 'county', 'state', 'season', 'title',
-       'latitude', 'longitude', 'date', 'number', 'classification', 'geohash',
-       'temperature_high', 'temperature_mid', 'temperature_low', 'dew_point',
-       'humidity', 'cloud_cover', 'moon_phase', 'precip_intensity',
-       'precip_probability', 'precip_type', 'pressure', 'summary', 'uv_index',
-       'visibility', 'wind_bearing', 'wind_speed', 'location']

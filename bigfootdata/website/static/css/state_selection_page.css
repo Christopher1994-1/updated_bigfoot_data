@@ -1,0 +1,21 @@
+.state_selection_main {
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  width: 92%;
+  margin: auto;
+  margin-top: 4%;
+}
+.state_selection_main .top-side {
+  display: flex;
+  color: white;
+  align-items: anchor-center;
+}
+.state_selection_main .top-side img {
+  width: 100px;
+}
+.state_selection_main .top-side h1 {
+  font-size: 24px;
+  font-family: math;
+  margin-left: 7px;
+}/*# sourceMappingURL=state_selection_page.css.map */
