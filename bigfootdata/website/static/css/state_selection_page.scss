@@ -1,10 +1,13 @@
+
+
+
+
 .state_selection_main {
-    border: 1px solid white;
     display: flex;
     flex-direction: column;
     width: 92%;
     margin: auto;
-    margin-top: 4%;
+    margin-top: 2%;
 
     .top-side {
         display: flex;
@@ -21,4 +24,210 @@
             margin-left: 7px;
         }
     }
+}
+
+
+.rp1 {
+    margin: 0;
+    margin-top: 10;
+    font-size: 22px;
+    font-family: math;
+    margin-left: 4px;
+    color: rgba(46, 255, 168, 0.92);
+}
+
+.recent_reports1 {
+    margin-top: 10px;
+
+    a {
+        color: white;
+        text-decoration: none;
+
+        .report1 {
+            color: white;
+            font-family: math;
+            background: #1c1c1c;
+            padding: 9px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid white;
+
+
+            h1 {
+                margin: 0;
+            }
+
+            h3 {
+                margin: 0;
+            }
+
+            p {
+                margin: 0;
+            }
+
+
+            &:hover {
+                background-color: #313131;
+
+            }
+        }
+
+
+    }
+
+}
+
+
+.county_reports {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    overflow: auto;
+    max-height: 400px;
+    margin-bottom: 17px;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .counties {
+    background: #434343;;
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: 
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      background-color 0.2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      background-color: rgba(46, 255, 168, 0.92);
+
+      span {
+        color: black;
+      }
+
+      h1 {
+        color: black;
+      }
+    }
+
+    h1 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      color: white;
+    font-family: math;
+
+      span {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #ffffff; // muted gray
+        
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+.tb-banner {
+  position: relative;
+  isolation: isolate;
+  min-height: clamp(320px, 52vh, 560px);
+  display: grid;
+  align-items: end;
+  padding: clamp(20px, 4vw, 56px);
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  background: #0b0f0d;
+
+  &__media {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+
+    // Replace with your own hero image:
+    // e.g. url("/images/texas-bigfoot-hero.jpg")
+    background-image:
+      linear-gradient(120deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65)),
+      url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=2400&q=80");
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.03);
+    filter: saturate(1.05) contrast(1.05);
+  }
+
+  // vignette + color wash overlay
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(90% 70% at 20% 30%, rgba(255, 122, 0, 0.20), transparent 55%),
+      radial-gradient(70% 60% at 80% 40%, rgba(0, 140, 90, 0.22), transparent 60%),
+      radial-gradient(120% 120% at 50% 80%, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.25));
+  }
+
+  &__content {
+    max-width: 93%;
+    color: #f3f4f2;
+    margin: auto;
+    font-family: math;
+    margin-top: 17px;
+    border-bottom: 1px solid white;
+  }
+
+  &__kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 10px 0;
+    font-size: 0.95rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(243, 244, 242, 0.85);
+
+    &::before {
+      content: "";
+      width: 44px;
+      height: 2px;
+      background: linear-gradient(90deg, #ff7a00, rgba(255, 122, 0, 0));
+      border-radius: 999px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 800;
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+    font-size: clamp(2.2rem, 5vw, 4.2rem);
+    text-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  }
+
+  &__title-accent {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: clamp(1.05rem, 2.2vw, 1.4rem);
+    color: rgba(243, 244, 242, 0.88);
+    letter-spacing: 0.01em;
+  }
 }

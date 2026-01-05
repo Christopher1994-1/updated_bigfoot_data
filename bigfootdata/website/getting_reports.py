@@ -109,9 +109,9 @@ def getting_recent_reports(state):
 
 
     return {
-    "report_one": {"title1": first_report_title, "first_atag": first_report_return_a_tag, "first_class": first_report_class, "number": first_number},
-    "report_two": {"title2": second_report_title, "second_atag": second_report_return_a_tag, "second_class": second_report_class, "number": second_number},
-    "report_three": {"title3": third_report_title, "third_atag": third_report_return_a_tag, "third_class": third_report_class, "number": third_number},
+    "report_one": {"title": first_report_title, "atag": first_report_return_a_tag, "class": first_report_class, "number": first_number},
+    "report_two": {"title": second_report_title, "atag": second_report_return_a_tag, "class": second_report_class, "number": second_number},
+    "report_three": {"title": third_report_title, "atag": third_report_return_a_tag, "class": third_report_class, "number": third_number},
     "total_sightings": number_of_sightings,
     }
 
@@ -227,7 +227,7 @@ def one_case(state, county, id_number):
     id_number = float(id_number)
 
     df = bigfoot_geo_reports
-    df_state = df.loc[(bigfoot_geo_reports['state'] == state) & (bigfoot_geo_reports['county'] == county) & (bigfoot_geo_reports['number'] == id_number)]
+    df_state = df.loc[(bigfoot_geo_reports['number'] == id_number)]
 
     json_rows = []
     for a, row in df_state.iterrows():

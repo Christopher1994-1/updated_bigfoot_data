@@ -8,14 +8,51 @@
 
 {% block content %}
 
+<div class="tb-banner__content">
+    <p class="tb-banner__kicker">{{state_slogan}}</p>
+
+    <h1 class="tb-banner__title">
+      {{state_name}} Bigfoot Sightings!
+    </h1>
+</div>
 
 <div class="state_selection_main">
     <div class="top-side">
-        <img src="{% static 'images/states/'|add:state_name|add:'.png' %}" alt="{{ state_name }} icon">
+        <img src="{% static 'images/states/'|add:image_state_name|add:'.png' %}" alt="{{ state_name }} icon">
 
         <h1>{{total_sightings}} Total Sightings in {{state_name}}</h1>
     </div>
+
+    <h1 class="rp1">Recent Reports</h1>
+
+    <div class="recent_reports1">
+        {% for report in recent_reports.values %}
+
+        <a href="{% url 'case' report.number %}">
+            <div class="report1">
+                <h1>{{ report.atag }}</h1>
+                <h3>{{report.class}}</h3>
+                <p>{{report.title}}</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+
+    <h1 class="rp1">Reports by {{state_name}} Counties</h1>
+
+    <div class="county_reports">
+        {% for county1, ss in county.items %}
+            <a href="">
+                <div class="counties">
+                    <h1>{{county1}} - <span>{{ss}}</span></h1>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
 </div>
+
+
+{% include 'index_things/expeditions_misc.html' %}
 
 
 
