@@ -8,5 +8,6 @@ from . import views
 urlpatterns = [
     path('', views.index1, name='index1'),
     path('state_selection/<str:state_name>/', views.state_selection, name="state_selection"),
-    path('case/<str:case_number>/', views.case, name="case")
+    path('case/<str:case_number>/', views.case, name="case"),
+    path('county_cases/<str:state>/<str:county>/', views.county_cases, name="county_cases")
 ]

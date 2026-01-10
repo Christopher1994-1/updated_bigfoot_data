@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>{{state_shorthand}} County: {{choosen_county}}</title>
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="all_counties">
+    {% for c in all_counties %}
+        <a href="{% url 'case' c.number %}">
+            <div class="county">
+                <h1>{{c.title}}</h1>
+                <h2>{{c.date}}</h2>
+                <h3>{{c.classification}}</h3>
+                <small>Case Number: {{c.number}}</small>
+            </div>
+        </a>
+    {% endfor %}
+</div>
+
+
+{% endblock content %}
+

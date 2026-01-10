@@ -66,6 +66,62 @@ state_slogans: dict[str] = {
 }
 
 
+state_shorthands: dict[str] = {
+    'alabama': 'AL',
+    'alaska': 'AK',
+    'arizona': 'AZ',
+    'arkansas': 'AR',
+    'california': 'CA',
+    'colorado': 'CO',
+    'connecticut': 'CT',
+    'delaware': 'DE',
+    'florida': 'FL',
+    'georgia': 'GA',
+    'hawaii': 'HI',
+    'idaho': 'ID',
+    'illinois': 'IL',
+    'indiana': 'IN',
+    'iowa': 'IA',
+    'kansas': 'KS',
+    'kentucky': 'KY',
+    'louisiana': 'LA',
+    'maine': 'ME',
+    'maryland': 'MD',
+    'massachusetts': 'MA',
+    'michigan': 'MI',
+    'minnesota': 'MN',
+    'mississippi': 'MS',
+    'missouri': 'MO',
+    'montana': 'MT',
+    'nebraska': 'NE',
+    'nevada': 'NV',
+    'new hampshire': 'NH',
+    'new jersey': 'NJ',
+    'new mexico': 'NM',
+    'new york': 'NY',
+    'north carolina': 'NC',
+    'north dakota': 'ND',
+    'ohio': 'OH',
+    'oklahoma': 'OK',
+    'oregon': 'OR',
+    'pennsylvania': 'PA',
+    'rhode island': 'RI',
+    'south carolina': 'SC',
+    'south dakota': 'SD',
+    'tennessee': 'TN',
+    'texas': 'TX',
+    'utah': 'UT',
+    'vermont': 'VT',
+    'virginia': 'VA',
+    'washington': 'WA',
+    'west virginia': 'WV',
+    'wisconsin': 'WI',
+    'wyoming': 'WY'
+}
+
+
+
+
 
 def index1(request):
     
@@ -87,9 +143,11 @@ def case(request, case_number):
     stateL = state_slogans[state.lower()]
     image = f'{state.lower()}.png'
     
+    secondry_case = str(case_number).split('.')[0]
     
     context: dict[str] = {
         'case_number': case_number,
+        'secondry_case': secondry_case,
         'report': number_one_case,
         'state_name': state,
         'county': county,
@@ -104,7 +162,22 @@ def case(request, case_number):
 
 
 
-
+def county_cases(request, state, county):
+    counties = getting_reports.showing_reports(state, county)
+    
+    state_shorthand2: str = state_shorthands[str(state).lower()]
+    
+    
+    print(counties)
+    
+    context = {
+        'state_shorthand': state_shorthand2,
+        'choosen_county': county,
+        'all_counties': counties
+        
+    }
+    context.update(basic_context)
+    return render(request, 'pages/county_cases.html', context)
 
 
 

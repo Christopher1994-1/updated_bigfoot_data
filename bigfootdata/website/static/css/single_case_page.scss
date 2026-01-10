@@ -1,0 +1,160 @@
+
+
+
+.main-state-container2 {
+    width: 85%;
+    margin: auto;
+    margin-top: 2%;
+
+
+    .header-area {
+        display: flex;
+        border: 1px solid;
+
+        .header-area-content {
+            h5 {
+                color: white;
+                font-family: math;
+                margin-left: 10px;
+                font-size: 23px;
+                margin: 0;
+                margin-left: 10px;
+            }
+
+
+            h4 {
+                color: white;
+                margin-left: 10px;
+                font-size: 17px;
+                font-family: math;
+                letter-spacing: 2px;
+            }
+        }
+
+    }
+
+
+    .individual_case {
+
+        #reportcase {
+            color: white;
+            font-family: math;
+            font-size: 21px;
+            margin: 0;
+            margin-top: 2%;
+            margin-bottom: 1%;
+        }
+
+        small {
+            color: grey;
+            font-family: math;
+            margin: 0;
+        }
+
+        .statecase {
+            color: white;
+
+            span {
+                color: red;
+            }
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.all_counties {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.county {
+  background: linear-gradient(
+    180deg,
+    rgba(20, 32, 24, 0.95),
+    rgba(10, 18, 14, 0.95)
+  );
+  border: 1px solid rgba(90, 120, 95, 0.25);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.6);
+    border-color: rgba(120, 180, 140, 0.6);
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #e2f1e7;
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.03em;
+  }
+
+  h2 {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #a7c4b2;
+    margin-bottom: 0.6rem;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #7fbf9a;
+    margin-bottom: 1rem;
+  }
+
+  small {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: #8faea0;
+    opacity: 0.85;
+  }
+
+  // subtle "classified file" accent
+  &::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #7fbf9a;
+    box-shadow: 0 0 12px rgba(127, 191, 154, 0.7);
+    opacity: 0.6;
+  }
+}
+
+/* Optional: responsive spacing tweak */
+@media (max-width: 600px) {
+  .all_counties {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+}

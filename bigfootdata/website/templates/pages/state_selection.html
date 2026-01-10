@@ -42,7 +42,7 @@
 
     <div class="county_reports">
         {% for county1, ss in county.items %}
-            <a href="">
+            <a href="{% url 'county_cases' state=state_name county=county1 %}">
                 <div class="counties">
                     <h1>{{county1}} - <span>{{ss}}</span></h1>
                 </div>

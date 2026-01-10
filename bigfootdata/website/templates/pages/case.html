@@ -17,31 +17,31 @@
 </div>
 
 
-<div class="main-state-container">
+<div class="main-state-container2">
     <!-- Header of the container -->
     <div class="header-area">
         <img src="{% static 'images/states/'|add:state_name|add:'.png' %}" alt="" width="100" height="100">
         <div class="header-area-content">
             <h5>{{ report.state }}</h5>
             <div class="sep"></div>
-        <h5>Witnessed in {{ report.county }}, {{ report.state }}</h5>
+            <h4>Witnessed in {{ report.county }}, {{ report.state }}</h4>
         </div>
     </div>
 
 
     <div class="individual_case">
-        <h5>Report # {{ case_number }} <span id="span1">({{ report.classification }})</span></h5>
+        <h5 id="reportcase">Report #{{ secondry_case }} <span id="span1">({{ report.classification }})</span></h5>
         <small>Submitted by witness on {{ report.date }}</small>
         <div class="sep"></div>
-        <h5>STATE: <span id="span2">{{ report.state }}</span></h5>
-        <h5>COUNTY: <span id="span2">{{ report.county }}</span></h5>
-        <h5>LOCTAION DETAILS: <span id="span2">{{ report.location_details }}</span></h5>
+        <h5 class="statecase">STATE: <span id="span2">{{ report.state }}</span></h5>
+        <h5 class="statecase">COUNTY: <span id="span2">{{ report.county }}</span></h5>
+        <h5 class="statecase">LOCTAION DETAILS: <span id="span2">{{ report.location_details }}</span></h5>
         <br>
-        <h5>OBSERVED: <span id="span2">{{ report.observed }}</span></h5>
+        <h5 class="statecase">OBSERVED: <span id="span2">{{ report.observed }}</span></h5>
         <div class="sep"></div>
-        <h5>LATITUDE: <span id="span2">{{ report.latitude }}</span></h5>
-        <h5>LONGITUDE: <span id="span2">{{ report.longitude }}</span></h5>
-        <h5>CONDITIONS: <span id="span2">{{ report.summary }}</span></h5>
+        <h5 class="statecase">LATITUDE: <span id="span2">{{ report.latitude }}</span></h5>
+        <h5 class="statecase">LONGITUDE: <span id="span2">{{ report.longitude }}</span></h5>
+        <h5 class="statecase">CONDITIONS: <span id="span2">{{ report.summary }}</span></h5>
 
     </div>
 
