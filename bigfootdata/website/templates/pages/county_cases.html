@@ -8,13 +8,15 @@
 
 {% block content %}
 
+<h1 id="header-e">{{state_name}} - {{choosen_county}} - {{number_of_counties}}</h1>
+
 <div class="all_counties">
     {% for c in all_counties %}
         <a href="{% url 'case' c.number %}">
             <div class="county">
-                <h1>{{c.title}}</h1>
-                <h2>{{c.date}}</h2>
                 <h3>{{c.classification}}</h3>
+                <h2>{{c.date}}</h2>
+                <h1>{{c.title}}</h1>
                 <small>Case Number: {{c.number}}</small>
             </div>
         </a>

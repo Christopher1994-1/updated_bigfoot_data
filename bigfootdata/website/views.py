@@ -167,13 +167,14 @@ def county_cases(request, state, county):
     
     state_shorthand2: str = state_shorthands[str(state).lower()]
     
-    
-    print(counties)
+    number_of_counties: str = str(len(counties))
     
     context = {
         'state_shorthand': state_shorthand2,
         'choosen_county': county,
-        'all_counties': counties
+        'all_counties': counties,
+        'state_name': state,
+        'number_of_counties': number_of_counties
         
     }
     context.update(basic_context)

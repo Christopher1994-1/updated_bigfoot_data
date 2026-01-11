@@ -42,75 +42,34 @@
   color: red;
 }
 
+#header-e {
+  width: 90%;
+  margin: auto;
+  margin-top: 3%;
+  color: white;
+  font-family: math;
+  letter-spacing: 3px;
+}
+
 .all_counties {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
+  width: 90%;
+  margin: auto;
+  margin-top: 4%;
 }
 .all_counties a {
   text-decoration: none;
-  color: inherit;
+  color: white;
+  font-family: math;
 }
-
-.county {
-  background: linear-gradient(180deg, rgba(20, 32, 24, 0.95), rgba(10, 18, 14, 0.95));
-  border: 1px solid rgba(90, 120, 95, 0.25);
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  position: relative;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+.all_counties a .county {
+  background: #242424;
+  padding: 0px 5px 5px 13px;
+  border-radius: 10px;
+  margin-bottom: 5px;
 }
-.county:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.6);
-  border-color: rgba(120, 180, 140, 0.6);
+.all_counties a .county h3 {
+  color: rgba(46, 255, 168, 0.92);
 }
-.county h1 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #e2f1e7;
-  margin-bottom: 0.4rem;
-  letter-spacing: 0.03em;
-}
-.county h2 {
-  font-size: 0.95rem;
-  font-weight: 400;
-  color: #a7c4b2;
-  margin-bottom: 0.6rem;
-}
-.county h3 {
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #7fbf9a;
-  margin-bottom: 1rem;
-}
-.county small {
-  display: inline-block;
-  font-size: 0.75rem;
-  color: #8faea0;
-  opacity: 0.85;
-}
-.county::after {
-  content: "";
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #7fbf9a;
-  box-shadow: 0 0 12px rgba(127, 191, 154, 0.7);
-  opacity: 0.6;
-}
-
-/* Optional: responsive spacing tweak */
-@media (max-width: 600px) {
-  .all_counties {
-    padding: 1.25rem;
-    gap: 1rem;
-  }
+.all_counties a .county:hover {
+  background: #2c2c2c;
 }/*# sourceMappingURL=single_case_page.css.map */
